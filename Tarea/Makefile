@@ -24,7 +24,10 @@ run-lester:
 	go run ./lester
 
 run-michael:
-	go run ./michael
+	for i in $$(seq 1 500); do \
+		go run ./michael; \
+		sleep 2; \
+	done
 
 run-franklin:
 	go run ./franklin
